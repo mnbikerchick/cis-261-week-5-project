@@ -44,11 +44,11 @@ def printinfo(EmpDetailList):
         TotGrossPay += grosspay
         TotTax += incometax
         TotNetPay += netpay
-        EmpTotals:{"TotEmp"} = TotEmployees
-        EmpTotals:{"TotHours"} = TotHours
-        EmpTotals:{"TotGrossPay"} =TotGrossPay
-        EmpTotals: {"TotTax"} = TotTax
-        EmpTotals: {"TotNetPay"} = TotNetPay
+        EmpTotals ["TotEmp"] = TotEmployees
+        EmpTotals ["TotHours"] = TotHours
+        EmpTotals ["TotGrossPay"] =TotGrossPay
+        EmpTotals ["TotTax"] = TotTax
+        EmpTotals ["TotNetPay"] = TotNetPay
 
 def PrintTotals(EmpTotals):    
     print()
@@ -77,14 +77,9 @@ if __name__ == "__main__":
         hours = GetHoursWorked()
         hourlyrate = GetHourlyRate()
         taxrate = GetTaxRate()
-    def EmpDetail (fromdate, todate, empname, hours, hourlyrate, taxrate):
-        
-        
-
-        #write code to insert fromdate, todate, empname, hours, hourlyrate, and taxrate into list EmpDetail
-
-
-        #the following code appends the list EmpDetail to the list EmpDetailList
+        EmpDetail = (fromdate, todate, empname, hours, hourlyrate, taxrate)
+   #write code to insert fromdate, todate, empname, hours, hourlyrate, and taxrate into list EmpDetail
+   #the following code appends the list EmpDetail to the list EmpDetailList
         EmpDetailList.append(EmpDetail)
 
         # COMMENT OUT THE FOLLOWING CODE
@@ -93,7 +88,7 @@ if __name__ == "__main__":
         #TotGrossPay += grosspay
         #TotTax += incometax
         #TotNetPay += netpay
-    printinfo(EmpDetailList)
+    printinfo (EmpDetailList)
     PrintTotals (EmpTotals)
 
 
