@@ -77,10 +77,10 @@ if __name__ == "__main__":
         hours = GetHoursWorked()
         hourlyrate = GetHourlyRate()
         taxrate = GetTaxRate()
-        EmpDetail = (fromdate, todate, empname, hours, hourlyrate, taxrate)
+EmpDetail = (fromdate, todate, empname, hours, hourlyrate, taxrate)
    #write code to insert fromdate, todate, empname, hours, hourlyrate, and taxrate into list EmpDetail
    #the following code appends the list EmpDetail to the list EmpDetailList
-        EmpDetailList.append(EmpDetail)
+EmpDetailList.append(EmpDetail)
 
         # COMMENT OUT THE FOLLOWING CODE
         #TotEmployees += 1
@@ -88,8 +88,8 @@ if __name__ == "__main__":
         #TotGrossPay += grosspay
         #TotTax += incometax
         #TotNetPay += netpay
-    printinfo (EmpDetailList)
-    PrintTotals (EmpTotals)
+printinfo (EmpDetailList)
+PrintTotals (EmpTotals)
 
 
 
