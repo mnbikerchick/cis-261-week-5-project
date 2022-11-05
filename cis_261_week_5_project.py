@@ -6,9 +6,8 @@ def GetEmpName():
     return empname
 def GetDatesWorked():
     fromdate = input("Enter the From Date (mm/dd/yyyy) :  ")
-    return fromdate 
     todate = input("Enter the To Date (mm/dd/yyyy) :  ")
-    return todate    
+    return fromdate, todate    
 def GetHoursWorked():
     hours = float(input('Enter amount of hours worked:  '))
     return hours
@@ -51,8 +50,6 @@ def printinfo(EmpDetailList):
         EmpTotals: {"TotTax"} = TotTax
         EmpTotals: {"TotNetPay"} = TotNetPay
 
-
-
 def PrintTotals(EmpTotals):    
     print()
     print(f'Total Number Of Employees: {EmpTotals["TotEmp"]}')
@@ -60,11 +57,6 @@ def PrintTotals(EmpTotals):
     print(f'Total Gross Pay: {EmpTotals["TotGrossPay"]}')
     print(f'Total Tax: {EmpTotals["TotTax"]}')
     print(f'Total Net Pay: {EmpTotals["TotNetPay"]}')
-
-   
-
-
-
 
 if __name__ == "__main__":
     # COMMENT OUT THE FOLLOWING CODE
