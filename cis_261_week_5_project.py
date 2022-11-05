@@ -1,5 +1,5 @@
-#   Student Name
-#   CIS261 11/4/2022
+#   Jeanne Olsen
+#   CIS261 11/5/2022
 #   Project Phase 2
 def GetEmpName():
     empname = input("Enter employee name (END to terminate): ")
