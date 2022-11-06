@@ -58,30 +58,30 @@ def PrintTotals(EmpTotals):
     print(f'Total Net Pay: {EmpTotals["TotNetPay"]}')
 
 if __name__ == "__main__":
-    
-    TotEmployees = 0
-    TotHours = 0.00
-    TotGrossPay = 0.00
-    TotTax = 0.00
-    TotNetPay = 0.00
+   TotEmployees = 0
+   TotHours = 0.00
+   TotGrossPay = 0.00
+   TotTax = 0.00
+   TotNetPay = 0.00
 
-    EmpDetailList = []
-    EmpTotals = {}
-    while True:
-        empname = GetEmpName()
-        if (empname.upper() == "END"):
-            break
-        fromdate, todate = GetDatesWorked()
-        hours = GetHoursWorked()
-        hourlyrate = GetHourlyRate()
-        taxrate = GetTaxRate()
-EmpDetail = (fromdate, todate, empname, hours, hourlyrate, taxrate)
-EmpDetailList.append(EmpDetail)
+   EmpDetailList = []
+   EmpTotals = {}
+   while True:
+       empname = GetEmpName()
+       if(empname.upper() == "END"):
+           break
+       fromdate, todate = GetDatesWorked()
+       hours = GetHoursWorked()
+       hourlyrate = GetHourlyRate()
+       taxrate = GetTaxRate()
 
-TotEmployees += 1
-TotHours += hours
-TotGrossPay += grosspay
-TotTax += incometax
-TotNetPay += netpay
+       EmpDetail = (fromdate, todate, empname, hours, hourlyrate, taxrate)
+       EmpDetailList.append(EmpDetail)
+
+       TotEmployees += 1
+       TotHours += hours
+       TotGrossPay += grosspay
+       TotTax += incometax
+       TotNetPay += netpay
 printinfo (EmpDetailList)
 PrintTotals (EmpTotals)
