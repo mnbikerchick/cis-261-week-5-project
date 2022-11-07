@@ -44,11 +44,6 @@ def printinfo(EmpDetailList):
         EmpTotals ["TotGrossPay"] =TotGrossPay
         EmpTotals ["TotTax"] = TotTax
         EmpTotals ["TotNetPay"] = TotNetPay
-        TotEmployees += 1
-        TotHours += hours
-        TotGrossPay += grosspay
-        TotTax += incometax
-        TotNetPay +=netpay
 
 def PrintTotals(EmpTotals):    
     print()
